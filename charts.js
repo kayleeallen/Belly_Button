@@ -77,14 +77,13 @@ function buildCharts(sample) {
     //console.log("hello");
     console.log(sampleValues);
 
-
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
 
     var yticks = otuIds.slice(0,10).map(id => "OTU " + id).reverse();
     console.log(yticks);
-
+    
     // 8. Create the trace for the bar chart. 
     var barData = [{
       x: sampleValues.slice(0,10).reverse(),
@@ -109,12 +108,11 @@ function buildCharts(sample) {
         text: 'The bar chart displays the top 10 bacterial species (OTUs)<br>with the number of samples found in your belly button',
         showarrow: false
       }]
-    };    
-     
+    };
+    //console.log("hello");
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout, {responsive: true});    
-  });
-}
+    Plotly.newPlot("bar", barData, barLayout, {responsive: true});
+
     // Bar and Bubble charts
     // Create the buildCharts function.
     //function buildCharts(sample) {
